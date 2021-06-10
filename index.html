@@ -30,10 +30,10 @@
                 <div class="request-info">
                     <h2>Request Info & Booking</h2>
                     <p>Fill this form to complete your application</p>
-                    <form action="#">
-                        <input id="name" type="text" placeholder="Your Name">
-                        <input id="email" type="email" placeholder="Your Email">
-                        <input id="number" type="number" placeholder="Your Phone">
+                    <form onsubmit="handleSubmit(event)">
+                        <input id="name" type="text" placeholder="Your Name" required>
+                        <input id="email" type="email" placeholder="Your Email" required>
+                        <input id="number" type="text" placeholder="Your Phone" maxlength="11" minlength="11" required>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -91,6 +91,17 @@
             <p class="copyright">© Copyright. All Rights Reserved</p>
         </div>
     </div>
+
+    <script>
+        function handleSubmit(e) {
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let number = document.getElementById("number");
+
+            e.preventDefault();
+            alert(`Name: ${name.value}\nEmail: ${email.value}\nNumber: ${number.value}`);
+        }
+    </script>
 </body>
 
 </html>

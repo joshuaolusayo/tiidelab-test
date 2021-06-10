@@ -66,7 +66,7 @@ body {
 }
 
 .bg-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/background.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./images/background.jpeg");
   background-size: cover;
   background-attachment: fixed;
   padding-top: 50px;
@@ -84,7 +84,7 @@ body {
 }
 
 .request-info {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 20px;
 }
@@ -155,6 +155,10 @@ body {
 @media screen and (min-width: 768px) {
   .services {
     flex-flow: row nowrap;
+  }
+  .services .item {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
